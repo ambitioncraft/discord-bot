@@ -74,8 +74,8 @@ export class DiscordBot extends CommandClientBase {
       console.log('from a main channel')
     } else {
       console.log('from bridge channel', instance)
-      if (commandToRun.flags.realm) {
-        args.push(`--realm=${instance}`)
+      if (commandToRun.flags.instance) {
+        args.splice(1, 0, instance)
       }
     }
 

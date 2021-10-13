@@ -33,7 +33,7 @@ export default class DiscordCommandContext extends CommandContext {
 
   async executeCommand(cmdConfig: oclif.Config | oclif.IConfig) {
     const commandText = this.args.join(' ')
-    let title = `**${this.args[0]}** ${[...this.args].splice(1).filter(x => !x.startsWith('--realm')).join(' ')}`
+    let title = `**${this.args[0]}** ${[...this.args].splice(1).join(' ')}`
     if (title.length > 45) {
       title = title.substring(0, 45) + '...'
     }
